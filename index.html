@@ -11,7 +11,7 @@
   <body>
     <section class="registration-section">
       <div class="registration">
-        <h2>Register</h2>
+        <h2 class="registration__title"><span>Register</span></h2>
         <p>Create uour account. It`s free and only takes a minute.</p>
         <form class="form flex-column" action="#">
           <div class="name-wrapper">
@@ -50,8 +50,14 @@
               required
             />
             <span
-              >I accept the <a href="#" target="_blank"> Terms of Use</a> &
-              <a href="#" target="_blank">Private Policy</a></span
+              >I accept the
+              <a class="registration_link" href="#" target="_blank">
+                Terms of Use</a
+              >
+              &
+              <a class="registration_link" href="#" target="_blank"
+                >Private Policy</a
+              ></span
             >
           </label>
           <input class="btn" type="submit" value="submit" />
@@ -59,7 +65,10 @@
       </div>
     </section>
     <div class="registration__footer">
-      <p>Already have an account? <a href="#">Sing in</a></p>
+      <p>
+        Already have an account?
+        <a class="registration_link" href="#">Sing in</a>
+      </p>
     </div>
   </body>
 </html>

@@ -1,18 +1,19 @@
 :root {
   --color-white: rgba(241, 245, 235, 1);
+  --color-green: rgba(68, 179, 68, 1);
+  --text-color: rgba(126, 120, 127, 1);
   --border-color: 1px solid #ccc;
 }
 * {
   box-sizing: border-box;
 }
 body {
-  color: rgba(126, 120, 127, 1);
+  color: var(--text-color);
   background-color: rgba(99, 115, 138, 1);
   font-family: sans-serif;
   font-size: 0.9em;
   line-height: 1em;
 }
-
 .registration {
   min-height: 300px;
   min-width: 200px;
@@ -23,6 +24,37 @@ body {
   border: var(--border-color);
   border-radius: 5px;
   background: #eee;
+}
+.registration__title {
+  position: relative;
+  margin: 3px 0 0 0;
+  text-align: center;
+  white-space: nowrap;
+}
+.registration__title:before,
+.registration__title:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  width: 30%;
+  height: 1px;
+  vertical-align: middle;
+  background: var(--text-color);
+}
+.registration__title:before {
+  left: -10px;
+  margin-left: -50%;
+}
+.registration__title:after {
+  left: 10px;
+  margin-right: -50%;
+}
+.registration__title > span {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  max-width: 90%;
 }
 .name-wrapper {
   display: flex;
@@ -45,11 +77,15 @@ body {
 }
 .btn {
   color: var(--color-white);
-  background-color: rgba(74, 162, 74, 1);
+  background-color: var(--color-green);
   text-transform: capitalize;
 }
 .registration__footer {
   color: var(--color-white);
+}
+.registration_link {
+  text-decoration: none;
+  color: var(--color-green);
 }
 h2,
 p {
